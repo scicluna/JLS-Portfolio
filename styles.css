@@ -58,13 +58,13 @@ body {
 
 .aboutme {
     display: flex;
-    word-break: break-all;
+    word-break: normal;
     padding: .5vw;
 }
 
 .aboutme>.cellcontainer {
     width: 100%;
-    font-size: .9rem;
+    font-size: 1.1rem;
 }
 
 .works>.cellcontainer,
@@ -114,6 +114,15 @@ ol {
 }
 
 .title {
+    padding: 15px;
+    height: 20%
+}
+
+.resumetext {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
     padding: 15px;
 }
 
@@ -232,7 +241,6 @@ li {
 }
 
 .carousel__slide:before {
-    content: counter(item);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -344,4 +352,60 @@ li {
 
 .carousel::after {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.center {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    margin: 0;
+}
+
+#carousel__slide1 {
+    background-image: url('./assets/imgs/gifthub.png');
+    background-position: center;
+    background-size: cover;
+}
+
+#carousel__slide2 {
+    background-image: url('./assets/imgs/techdeck.png');
+    background-position: center;
+    background-size: cover;
+}
+
+#carousel__slide3 {
+    background-image: url('./assets/imgs/servercrawl.png');
+    background-position: center;
+    background-size: cover;
+}
+
+#carousel__slide4 {
+    background-image: url('./assets/imgs/moviemash.png');
+    background-position: center;
+    background-size: cover;
+}
+
+#carousel__slide5 {
+    background-image: url('./assets/imgs/diceroller.png');
+    background-position: center;
+    background-size: cover;
+}
+
+#carousel__slide6 {
+    background-image: url('./assets/imgs/weather.png');
+    background-position: center;
+    background-size: cover;
+}
+
+#carousel__slide7 {
+    background-image: url('./assets/imgs/connectfour.png');
+    background-position: center;
+    background-size: cover;
+}
+
+#carousel__slide8 {
+    background-image: url('./assets/imgs/wordguesser.png');
+    background-position: center;
+    background-size: cover;
 }
