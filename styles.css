@@ -12,8 +12,13 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
     color: var(--offwhite);
-    background-color: var(--background)
+    background-color: var(--background);
+    position: relative;
+    min-height: 100vh;
 }
 
 .navbar-brand {
@@ -28,6 +33,7 @@ body {
     height: 5vh;
     position: absolute;
     bottom: 0;
+    z-index: 5;
 }
 
 .header {
@@ -35,7 +41,6 @@ body {
 }
 
 .maingrid {
-    overflow: hidden;
     position: relative;
     display: grid;
     margin-top: 7vh;
@@ -43,13 +48,17 @@ body {
     width: 100vw;
     height: 88vh;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
     gap: 5px;
 }
 
 .cell {
     display: flex;
     background-color: rgb(48, 48, 48);
+}
+
+.cell.works {
+    min-height: 15vh;
 }
 
 .compact {
@@ -60,12 +69,15 @@ body {
     display: flex;
     word-break: normal;
     padding: .5vw;
+    font-size: 1.2rem;
 }
 
-.aboutme>.cellcontainer {
-    width: 100%;
-    font-size: 1.1rem;
+.myimg {
+    float: left;
+    max-height: 15vh;
+    margin: 10px;
 }
+
 
 .works>.cellcontainer,
 .contact>.cellcontainer {
@@ -86,12 +98,7 @@ ol {
 
 .workstitle {
     z-index: 500;
-}
-
-.myimg {
-    float: left;
-    height: 15vh;
-    margin: 15px;
+    background-color: rgba(0, 0, 0, 0.432);
 }
 
 .gallery {
@@ -111,6 +118,7 @@ ol {
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
+    font-size: 1.2rem;
 }
 
 .title {
@@ -124,6 +132,7 @@ ol {
     justify-content: space-between;
     height: 80%;
     padding: 15px;
+    font-size: 1.2rem;
 }
 
 
@@ -408,4 +417,42 @@ li {
     background-image: url('./assets/imgs/wordguesser.png');
     background-position: center;
     background-size: cover;
+}
+
+@media only screen and (max-width: 1280px) {
+
+    body {
+        overflow-y: scroll;
+    }
+
+    .maingrid {
+        position: relative;
+        display: grid;
+        margin-top: 7vh;
+        margin-bottom: 5vh;
+        width: 100vw;
+        min-height: 88vh;
+        height: auto;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, auto);
+        gap: 5px;
+    }
+
+    h2 {
+        min-height: 0vh !important;
+        height: auto !important;
+        padding: 0 !important;
+    }
+
+    .cell.aboutme {
+        padding-bottom: 5px;
+        font-size: .8rem;
+    }
+
+    .cell.works {
+        min-height: 50vh;
+    }
+
+    ;
+
 }
