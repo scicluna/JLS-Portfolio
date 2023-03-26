@@ -6,7 +6,7 @@
 }
 
 :root {
-    --offwhite: rgba(255, 255, 255, 0.801);
+    --offwhite: rgba(255, 255, 255, 0.861);
     --white: rgb(255, 255, 255);
     --background: rgba(48, 48, 48, 0.957);
 }
@@ -135,6 +135,22 @@ ol {
     font-size: 1.2rem;
 }
 
+.modal {
+    top: 50vh;
+    --bs-modal-margin: 0rem;
+    --bs-modal-width: 750px;
+    --bs-modal-bg: var(--offwhite);
+    transform: translateY(-10%);
+    color: rgba(0, 0, 0, 0.883);
+}
+
+.center {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    margin: 0;
+}
 
 /*  -------------------------------------------------------------------------------------------------------  */
 @keyframes tonext {
@@ -267,6 +283,7 @@ li {
     scroll-snap-align: center;
 }
 
+/*
 @media (hover: hover) {
     .carousel__snapper {
         animation-name: tonext, snap;
@@ -285,6 +302,7 @@ li {
         animation-name: none;
     }
 }
+*/
 
 .carousel:hover .carousel__snapper,
 .carousel:focus-within .carousel__snapper {
@@ -363,14 +381,6 @@ li {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
 }
 
-.center {
-    position: absolute;
-    bottom: 50%;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    margin: 0;
-}
-
 #carousel__slide1 {
     background-image: url('./assets/imgs/gifthub.png');
     background-position: center;
@@ -425,10 +435,15 @@ li {
         overflow-y: scroll;
     }
 
+    .navbar {
+        height: 4vh;
+        position: absolute;
+    }
+
     .maingrid {
         position: relative;
         display: grid;
-        margin-top: 7vh;
+        margin-top: 4vh;
         margin-bottom: 5vh;
         width: 100vw;
         min-height: 88vh;
@@ -446,13 +461,21 @@ li {
 
     .cell.aboutme {
         padding-bottom: 5px;
-        font-size: .8rem;
+        font-size: 1.2rem;
     }
 
     .cell.works {
         min-height: 50vh;
     }
+}
 
-    ;
+@media only screen and (min-width: 2200px) {
+    .cell {
+        font-size: 1.5rem;
+    }
+
+    .resumetext {
+        font-size: 1.5rem;
+    }
 
 }

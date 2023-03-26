@@ -38,7 +38,7 @@
           regarding coding, especially as it pertains to my projects displayed here. If
           you are interested in how I constructed these projects or have good
           ideas for how to improve them, please reach out to me using the
-          contact information below. All opportunities and inquiries are welcome!Hope to hear from you soon!</p>
+          contact information below. All opportunities and inquiries are welcome! Hope to hear from you soon!</p>
       </div>
     </div>
     <div class="cell works">
@@ -48,7 +48,7 @@
           <section class="carousel" aria-label="Gallery">
             <ol class="carousel__viewport">
               <li id="carousel__slide1" tabindex="0" class="carousel__slide">
-                <a href="https://gifthub.herokuapp.com/" target="_blank" class="carousel__snapper">
+                <a data-bs-toggle="modal" data-bs-target="#modal1" class="carousel__snapper">
                   <a href="#carousel__slide8" class="carousel__prev">Go to last slide</a>
                   <a href="#carousel__slide2" class="carousel__next">Go to next slide</a>
                   <h1 class="center">Gifthub</h1>
@@ -163,6 +163,27 @@
       </div>
     </div>
   </section>
+
+
+
+  <div class="modal" tabindex="-1" id="modal1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <footer class="container-fluid d-flex justify-content-center align-items-center foot bg-dark">
     <a href="https://github.com/scicluna" target="_blank" class="list-group-item">
       <i class="fa-brands fa-github" style="font-size: 4vh"></i>
