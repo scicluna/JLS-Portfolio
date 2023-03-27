@@ -144,6 +144,34 @@ ol {
     color: rgba(0, 0, 0, 0.883);
 }
 
+.modal.show {
+    animation: blinking 500ms ease;
+}
+
+@keyframes blinking {
+    0% {
+        display: block;
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 25%;
+    }
+
+    50% {
+        opacity: 50%;
+    }
+
+    75% {
+        opacity: 75%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+
+}
+
 .card {
     border: transparent;
     outline-color: rgba(0, 0, 0, 0);
