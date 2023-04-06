@@ -55,6 +55,11 @@ body {
 .cell {
     display: flex;
     background-color: rgb(48, 48, 48);
+    transition: .3s
+}
+
+.cell:hover {
+    background-color: rgba(48, 48, 48, 0.729);
 }
 
 .cell.works {
@@ -214,6 +219,8 @@ ol {
     color: white
 }
 
+
+
 /*  -------------------------------------------------------------------------------------------------------  */
 @keyframes tonext {
     75% {
@@ -346,7 +353,7 @@ li {
     scroll-snap-align: center;
 }
 
-/*
+
 @media (hover: hover) {
     .carousel__snapper {
         animation-name: tonext, snap;
@@ -365,7 +372,7 @@ li {
         animation-name: none;
     }
 }
-*/
+
 
 .carousel:hover .carousel__snapper,
 .carousel:focus-within .carousel__snapper {
@@ -445,49 +452,49 @@ li {
 }
 
 #carousel__slide1 {
-    background-image: url('./assets/imgs/gifthub.png');
+    background-image: url('./assets/imgs/eventplanner.png');
     background-position: center;
     background-size: cover;
 }
 
 #carousel__slide2 {
-    background-image: url('./assets/imgs/techdeck.png');
+    background-image: url('./assets/imgs/slimehack.png');
     background-position: center;
     background-size: cover;
 }
 
 #carousel__slide3 {
-    background-image: url('./assets/imgs/servercrawl.png');
+    background-image: url('./assets/imgs/gifthub.png');
     background-position: center;
     background-size: cover;
 }
 
 #carousel__slide4 {
-    background-image: url('./assets/imgs/moviemash.png');
+    background-image: url('./assets/imgs/techdeck.png');
     background-position: center;
     background-size: cover;
 }
 
 #carousel__slide5 {
-    background-image: url('./assets/imgs/diceroller.png');
+    background-image: url('./assets/imgs/servercrawl.png');
     background-position: center;
     background-size: cover;
 }
 
 #carousel__slide6 {
-    background-image: url('./assets/imgs/weather.png');
+    background-image: url('./assets/imgs/moviemash.png');
     background-position: center;
     background-size: cover;
 }
 
 #carousel__slide7 {
-    background-image: url('./assets/imgs/connectfour.png');
+    background-image: url('./assets/imgs/diceroller.png');
     background-position: center;
     background-size: cover;
 }
 
 #carousel__slide8 {
-    background-image: url('./assets/imgs/wordguesser.png');
+    background-image: url('./assets/imgs/weather.png');
     background-position: center;
     background-size: cover;
 }
@@ -496,6 +503,7 @@ li {
 
     body {
         overflow-y: scroll;
+        overflow-x: hidden;
     }
 
     .navbar {
@@ -514,6 +522,7 @@ li {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(4, auto);
         gap: 5px;
+        overflow: hidden;
     }
 
     h2 {
